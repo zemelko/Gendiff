@@ -4,9 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Nikolay Zemelko zemelko1989gmail.com"]
 license = "MIT"
+packages = [{include = "gendiff"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+
+[tool.poetry.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
 
 [tool.poetry.dev-dependencies]
 
