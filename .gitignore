@@ -9,6 +9,7 @@ __pycache__/
 # Replit / packaging
 .replit
 replit.nix
+.breakpoints
 
 # Distribution / packaging
 .Python
