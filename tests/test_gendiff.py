@@ -4,27 +4,53 @@ import pytest
 
 @pytest.fixture
 def file1_json_flat():
-    return 'tests/fixtures/file1_flat.json'
+    return 'tests/fixtures/json/file1_flat.json'
 
 
 @pytest.fixture
 def file2_json_flat():
-    return 'tests/fixtures/file2_flat.json'
+    return 'tests/fixtures/json/file2_flat.json'
 
 
 @pytest.fixture
 def file1_yaml_flat():
-    return 'tests/fixtures/file1_flat.yaml'
+    return 'tests/fixtures/yaml/file1_flat.yaml'
 
 
 @pytest.fixture
 def file2_yaml_flat():
-    return 'tests/fixtures/file2_flat.yaml'
+    return 'tests/fixtures/yaml/file2_flat.yaml'
+
+
+@pytest.fixture
+def file1_json_tree():
+    return 'tests/fixtures/json/file1_tree.json'
+
+
+@pytest.fixture
+def file2_json_tree():
+    return 'tests/fixtures/json/file2_tree.json'
+
+
+@pytest.fixture
+def file1_yaml_tree():
+    return 'tests/fixtures/yaml/file1_tree.yaml'
+
+
+@pytest.fixture
+def file2_yaml_tree():
+    return 'tests/fixtures/yaml/file2_tree.yaml'
 
 
 @pytest.fixture
 def flatten_expected():
     with open('tests/fixtures/expected/Flatten.txt') as f:
+        return f.read()
+
+
+@pytest.fixture
+def tree_expected():
+    with open('tests/fixtures/expected/Tree.txt') as f:
         return f.read()
 
 
@@ -34,3 +60,11 @@ def test_json_flatten(file1_json_flat, file2_json_flat, flatten_expected):
 
 def test_yaml_flatten(file1_yaml_flat, file2_yaml_flat, flatten_expected):
     assert flatten_expected == generate_diff(file1_yaml_flat, file2_yaml_flat)
+
+
+def test_json_tree(file1_json_tree, file2_json_tree, tree_expected):
+    assert tree_expected == generate_diff(file1_json_tree, file2_json_tree)
+
+
+def test_yaml_tree(file1_yaml_tree, file2_yaml_tree, tree_expected):
+    assert tree_expected == generate_diff(file1_yaml_tree, file2_yaml_tree)
