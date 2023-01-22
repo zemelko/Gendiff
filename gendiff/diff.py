@@ -1,19 +1,20 @@
 FLAGS = ['same', 'delete', 'add', 'diff']
 
 
+def parsed_value(value):
+
+    values = {
+        True: 'true',
+        False: 'false',
+        None: 'null'
+    }
+    if isinstance(value, dict):
+        return value
+
+    return values.get(value, value)
+
+
 def diff_mapping(dict1, dict2):  # noqa: C901
-
-    def parsed_value(value):
-
-        values = {
-            True: 'true',
-            False: 'false',
-            None: 'null'
-        }
-        if isinstance(value, dict):
-            return value
-
-        return values.get(value, value)
 
     def mapping(d1, d2):
 
