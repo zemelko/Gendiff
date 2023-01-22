@@ -10,3 +10,4 @@ test:
 	poetry run pytest
 test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml
+nice: lint test
