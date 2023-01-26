@@ -3,11 +3,13 @@ from gendiff.parser import pair_files_loader
 from gendiff.diff import diff_mapping
 from gendiff.formatters.stylish import stylish
 from gendiff.formatters.plain import plain
+from gendiff.formatters.json import to_json
 
 
 FORMATS = {
     'stylish': stylish,
-    'plain': plain
+    'plain': plain,
+    'json': to_json
 }
 
 
