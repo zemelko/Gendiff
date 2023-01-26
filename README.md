@@ -13,3 +13,6 @@
 ### Plain FORMAT.
 #### Diff JSON tree files:
 [![asciicast](https://asciinema.org/a/554538.svg)](https://asciinema.org/a/554538)
+
+### Diff Dict to JSON FORMAT.
+[![asciicast](https://asciinema.org/a/554622.svg)](https://asciinema.org/a/554622)
