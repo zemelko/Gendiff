@@ -67,24 +67,24 @@ def to_json_expected():
 
 
 # Stylish format
-def test_json_flatten(file1_json_flat, file2_json_flat, flatten_stylish_expected):
+def test_stylish_json_flatten(file1_json_flat, file2_json_flat, flatten_stylish_expected):
     assert flatten_stylish_expected == generate_diff(file1_json_flat, file2_json_flat)
 
 
-def test_yaml_flatten(file1_yaml_flat, file2_yaml_flat, flatten_stylish_expected):
+def test_stylish_yaml_flatten(file1_yaml_flat, file2_yaml_flat, flatten_stylish_expected):
     assert flatten_stylish_expected == generate_diff(file1_yaml_flat, file2_yaml_flat)
 
 
-def test_json_tree(file1_json_tree, file2_json_tree, tree_stylish_expected):
+def test_stylish_json_tree(file1_json_tree, file2_json_tree, tree_stylish_expected):
     assert tree_stylish_expected == generate_diff(file1_json_tree, file2_json_tree)
 
 
-def test_yaml_tree(file1_yaml_tree, file2_yaml_tree, tree_stylish_expected):
+def test_stylish_yaml_tree(file1_yaml_tree, file2_yaml_tree, tree_stylish_expected):
     assert tree_stylish_expected == generate_diff(file1_yaml_tree, file2_yaml_tree)
 
 
 # Plain format
-def test_json_tree(file1_yaml_tree, file2_yaml_tree, tree_plain_expected):
+def test_plain_yaml_tree(file1_yaml_tree, file2_yaml_tree, tree_plain_expected):
     assert tree_plain_expected == generate_diff(file1_yaml_tree, file2_yaml_tree, format='plain')
 
 
