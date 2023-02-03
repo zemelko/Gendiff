@@ -75,4 +75,4 @@ def plain(value):  # noqa: C901
         result = itertools.chain(lines)
         return '\n'.join(result)
 
-    return iter_(value, []) + '\n'
+    return iter_(value, [])
