@@ -20,7 +20,7 @@ def decor(val):
         'null'
     }
 
-    if val in non_string:
+    if val in non_string or isinstance(val, int):
         return val
     else:
         return f'\'{val}\''
