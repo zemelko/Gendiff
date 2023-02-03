@@ -10,8 +10,10 @@ def parsed_value(value):
     }
     if isinstance(value, dict):
         return value
+    if isinstance(value, bool) or value is None:
+        return values.get(value)
 
-    return values.get(value, value)
+    return value
 
 
 def diff_mapping(dict1, dict2):  # noqa: C901
