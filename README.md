@@ -8,7 +8,7 @@
 
 ### Table of contents:
 - [Setup](https://github.com/NikolayZemelko/python-project-50#setup)
-- [Usage](https://github.com/NikolayZemelko/python-project-50#use)
+- [Usage](https://github.com/NikolayZemelko/python-project-50#use-gendiff--h-command-for-help)
 - [Stylish](https://github.com/NikolayZemelko/python-project-50#stylish)
 - [Plain](https://github.com/NikolayZemelko/python-project-50#plain)
 - [JSON](https://github.com/NikolayZemelko/python-project-50#json)
